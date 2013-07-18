@@ -1,0 +1,406 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".GPSActivity"
+    tools:ignore="ContentDescription" >
+
+    <ImageView
+        android:id="@+id/noMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/nomap" />
+    
+    <!--TextView
+        android:id="@+id/noMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:alpha="0.5"
+        android:text="@string/nomap_text"
+        android:textSize="@dimen/label_size" /-->
+
+	<LinearLayout
+	    android:id="@+id/mapFrame"
+	    android:layout_width="320dp"
+	    android:layout_height="320dp"
+	    android:layout_centerHorizontal="true"
+	    android:layout_centerVertical="true" >
+		    
+		<LinearLayout
+		    android:id="@+id/map"
+		    android:layout_width="10000dp"
+		    android:layout_height="10000dp"
+		    android:orientation="vertical" />
+		    
+    </LinearLayout>
+		
+	<LinearLayout
+	    android:id="@+id/mapFrame2"
+	    android:layout_width="320dp"
+	    android:layout_height="320dp"
+	    android:layout_centerHorizontal="true"
+	    android:layout_centerVertical="true" >
+		    
+		<RelativeLayout
+		    android:id="@+id/mapPins"
+		    android:layout_width="10000dp"
+		    android:layout_height="10000dp" >
+	
+			<!-- ImageView
+			    android:id="@+id/seed"
+			    android:layout_width="20dp"
+			    android:layout_height="20dp"
+			    android:layout_marginLeft="150dp"
+			    android:layout_marginTop="150dp"
+			    android:scaleType="fitCenter"
+			    android:src="@drawable/seed"
+			    android:visibility="gone" /-->
+	
+	    </RelativeLayout>
+							    
+    </LinearLayout>
+	
+    <ImageView
+        android:id="@+id/blank"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white" />
+    
+    <ImageView
+        android:id="@+id/pngAnim"
+        android:layout_width="290dp"
+        android:layout_height="290dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitCenter"
+        android:visibility="invisible" />
+	
+    <!-- ImageView
+        android:id="@+id/pngAnim2"
+        android:layout_width="290dp"
+        android:layout_height="290dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitCenter"
+        android:visibility="invisible" /-->
+        <!-- android:background="@drawable/bud_forward" /-->
+	
+	<ImageView
+	    android:id="@+id/center"
+	    android:layout_width="24dp"
+	    android:layout_height="24dp"
+	    android:layout_centerHorizontal="true"
+	    android:layout_centerVertical="true"
+	    android:scaleType="fitCenter"
+	    android:src="@android:drawable/ic_menu_mylocation"
+	    android:visibility="invisible" />
+    
+    <ImageView
+        android:id="@+id/mapOver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/map"
+        android:visibility="invisible" />
+    
+    <TextView
+        android:id="@+id/searching"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:drawable/toast_frame"
+        android:gravity="center"
+        android:shadowColor="#BB000000"
+        android:shadowRadius="2.75"
+        android:text="@string/searching"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/white" />
+    
+	<VideoView
+        android:id="@+id/videoView"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+    
+	<!-- ImageView
+	    android:id="@+id/seed"
+	    android:layout_width="32dp"
+	    android:layout_height="32dp"
+	    android:layout_marginLeft="120dp"
+	    android:layout_marginTop="240dp"
+	    android:contentDescription="@string/test"
+	    android:onClick="onSeedListen"
+	    android:scaleType="fitCenter"
+	    android:src="@drawable/seed"
+	    android:visibility="visible" /-->
+    
+    <ImageView
+	    android:id="@+id/magnifier"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:scaleType="fitCenter"
+	    android:src="@drawable/magnifier" />
+
+    <Button
+        android:id="@+id/uploadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="uploadData"
+        android:text="@string/upload_button"
+        android:textSize="@dimen/btn_size"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/trackingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:text="@string/start_tracking"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="@dimen/label_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/recordingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/start_recording"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="@dimen/label_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/goText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/go_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="@dimen/label_size" />
+    
+    <ToggleButton
+        android:id="@+id/trackingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:onClick="onTrackingToggled"
+        android:text="@string/start_tracking"
+        android:textOff="@string/start_tracking"
+        android:textOn="@string/stop_tracking"
+        android:textSize="@dimen/btn_size" />
+
+    <Button
+        android:id="@+id/goButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:onClick="onGo"
+        android:text="@string/go_button"
+        android:textSize="@dimen/btn_size" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:onClick="onSave"
+        android:text="@string/save_button"
+        android:textSize="@dimen/btn_size"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="onStop"
+        android:text="@string/stop_button"
+        android:textSize="@dimen/btn_size"
+        android:visibility="invisible" />
+
+	<ToggleButton
+	    android:id="@+id/playButton"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginTop="20dp"
+	    android:checked="false"
+	    android:onClick="onListen"
+	    android:text="@string/play_button"
+	    android:textOff="@string/play_button"
+	    android:textOn="@string/stop_button"
+	    android:textSize="@dimen/btn_size"
+	    android:visibility="invisible" />
+		
+    <ToggleButton
+        android:id="@+id/recordingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:onClick="onRecordingToggled"
+        android:text="@string/start_recording"
+        android:textOff="@string/start_recording"
+        android:textOn="@string/stop_recording"
+        android:textSize="@dimen/btn_size" />
+    
+	<RelativeLayout
+	    android:id="@+id/aboutFrame"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@color/white"
+	    android:visibility="invisible" >
+	    
+	    <ScrollView
+	        android:id="@+id/SCROLLER_ID1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginBottom="84dp"
+	        android:layout_marginTop="60dp"
+	        android:fillViewport="true"
+	        android:paddingLeft="30dp"
+	        android:paddingRight="30dp"
+	        android:scrollbarAlwaysDrawVerticalTrack="true"
+			android:fadeScrollbars="false"
+	        android:scrollbarStyle="outsideOverlay"
+	        android:scrollbars="vertical" >
+	        
+		    <TextView
+		        android:id="@+id/about"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+		        android:autoLink="web"
+		        android:text="@string/about"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textSize="@dimen/label_size" />
+	
+		</ScrollView>
+
+	    <TextView
+	        android:id="@+id/aboutTitle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="30dp"
+	        android:layout_marginTop="20dp"
+	        android:text="@string/menu_about"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:textSize="@dimen/title_size" />
+
+	    <TextView
+	        android:id="@+id/version"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@id/aboutTitle"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="30dp"
+	        android:text="@string/version"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:textColor="@color/gray"
+	        android:textSize="@dimen/label_size" />
+	    
+	</RelativeLayout>
+	
+	<RelativeLayout
+	    android:id="@+id/helpFrame"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@color/white"
+	    android:visibility="invisible" >
+	    
+	    <ScrollView
+	        android:id="@+id/SCROLLER_ID2"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginBottom="84dp"
+	        android:layout_marginTop="60dp"
+	        android:fillViewport="true"
+	        android:paddingLeft="30dp"
+	        android:paddingRight="30dp"
+	        android:scrollbarAlwaysDrawVerticalTrack="true"
+			android:fadeScrollbars="false"
+	        android:scrollbarStyle="outsideOverlay"
+	        android:scrollbars="vertical" >
+	        
+	        <TextView
+	            android:id="@+id/help"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:text="@string/help"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	            android:textSize="@dimen/label_size" />
+	
+		</ScrollView>
+        
+	    <TextView
+	        android:id="@+id/helpTitle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="30dp"
+	        android:layout_marginTop="20dp"
+	        android:text="@string/menu_help"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:textSize="@dimen/title_size" />
+
+	</RelativeLayout>
+		
+	<Button
+	    android:id="@+id/backButton"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginBottom="20dp"
+	    android:onClick="onReturn"
+	    android:text="@string/back_button"
+	    android:textSize="@dimen/btn_size"
+	    android:visibility="invisible" />
+
+	<ProgressBar
+	    android:id="@+id/spinner"
+	    style="?android:attr/progressBarStyleLarge"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerInParent="true"
+	    android:indeterminateBehavior="cycle"
+	    android:visibility="invisible" />
+	
+</RelativeLayout>

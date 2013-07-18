@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Grimpant</string>
+    <!-- string name="hello_world">Hello World!</string -->
+    <string name="menu_about">À propos</string>
+    <string name="menu_delete">Supprimer les données sauvegardées</string>
+    <string name="menu_help">Aide</string>
+    <string name="stop_recording">Arrêter l\'enregistrement</string>
+    <string name="start_recording">Planter une graine</string>
+    <string name="start_tracking">Commencer le parcours</string>
+    <string name="stop_tracking">Arrêter le parcours</string>
+    <string name="upload_button">Upload Files</string>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#bfbfbf</color>
+    <!-- color name="semi_white">#7FFFFFFF</color -->
+    <string name="go_button">Go !</string>
+    <string name="save_button">Envoyer</string>
+    <string name="back_button">Retourner</string>
+    <string name="play_button">Écouter</string>
+    <string name="stop_button">Arrêter</string>
+    <string name="go_text"><b>How treelike we are,\nHow human the tree</b>\n\nGretel Ehrlich, \"River History\", 1998</string>
+    <string name="version">Version 1.3.0</string>
+    <string name="outide_map">L\'enregistrement est uniquement possible dans la ville de Montpellier.</string>
+    <string name="searching">Recherche de GPS...</string>
+    <!-- string name="test">http://minim-v.com/grimpant/A000002A64C317/40.50689578,-74.47057746,20130615163348.mp3</string -->
+    <!-- string name="nomap_text">No Map Available  No Map Available  No Map Available\n\nNo Map Available  No Map Available  No Map Available\n\nNo Map Available  No Map Available  No Map Available\n\nNo Map Available  No Map Available  No Map Available\n\nNo Map Available  No Map Available  No Map Available\n\nNo Map Available  No Map Available  No Map Available\n\nNo Map Available  No Map Available  No Map Available\n\nNo Map Available  No Map Available  No Map Available</string -->
+    
+    
+    <string name="gps_disabled">Votre récepteur GPS est désactivé ! Voulez-vous l\'activer ?</string>
+    <string name="enable_gps">Activer le GPS</string>
+    <string name="do_nothing">Ne rien faire</string>
+    <string name="unsent_both">Grimpant a %1$d parcours et %2$d enregistrement(s) qui n\'ont pas été envoyés. Envoyer maintenant ?</string>
+    <string name="unsent_track">Grimpant n\'a pas pu envoyer %1$d parcours. Envoyer maintenant ?</string>
+    <string name="unsent_audio">Grimpant n\'a pas pu envoyer %1$d enregistrement(s). Envoyer maintenant ?</string>
+    <string name="ok">OK</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+	<string name="upload_recording">Voulez-vous sauvegarder/envoyer cet enregistrement ?</string>
+	<string name="upload_track">Voulez-vous sauvegarder/envoyer ce parcours ?</string>
+	<string name="need_lock"> L\'enregistrement nécessite un signal GPS stable.</string>
+	<string name="wait_lock">S\'il vous plaît, patientez jusqu\'à ce que Grimpant obtienne un signal GPS stable.</string>
+    <string name="unsent_notif">Grimpant a des parcours/enregistrements qui n\'ont pas été envoyés.</string>
+    <string name="delete_notif">Êtes-vous sûr de vouloir supprimer tous les fichiers sauvegardés ?</string>
+    <string name="detail_notif">Sélectionnez pour consulter les détails.</string>
+    <string name="upload_notif">Grimpant téléchargement</string>
+    <string name="uploading">Envoi</string>
+    <string name="track">du parcours</string>
+    <string name="audio">de l\'enregistrement audio</string>
+    <string name="uploading_finished">terminé</string>
+    <string name="uploading_error">Erreur lors de l\'envoi</string>
+    <string name="uploading_unsent">des parcours/enregistrement(s)</string>
+    <string name="is_tracking">Grimpant enregistre le parcours</string>
+    <string name="no_lock">Pas de signal GPS stable</string>
+    <string name="lock">GPS stable</string>
+	<string name="no_internet">Pas d\'accès internet !</string>
+	<string name="no_sd">Le support de stockage externe n\'est pas monté !</string>    	
+    
+    
+    <string name="about">Grimpant est une carte dynamique de la Ville de Montpellier qui révèle l\'entremêlement des mouvements humains et végétaux dans l\'infrastructure urbaine.\n\nUne application mobile vous permet d\'enregistrer vos parcours à travers la ville et de faire des enregistrements audio aux endroits où vous rencontrez une plante ou un arbre qui vous semble remarquable. Vous pouvez aussi utiliser l\'application pour écouter les enregistrements des autres participants. Les parcours et sons collectés et envoyés à partir de l\'application sont intégrés à une carte dynamique projetée sur le mur d\'une des salles d\'exposition de La Panacée.\n\nLe projet invite les participants à s\'inscrire dans la longue histoire de Montpellier marquée par une diversité culturelle et une biodiversité remarquables.\n\nLes artistes et La Panacée vous remercient pour votre participation et seront heureux de répondre à vos questions ou impressions.\n\nNB : Grimpant est conçu pour la ville de Montpellier. Il ne fonctionne pas dans d\'autres lieux.\n\nGrimpant\n2013\nTeri Rueb et Alan Price\nhttp://pan.ac/grimpant\n\nMobile App Development: Nima Vakili\n\nGrimpant est une œuvre produite par La Panacée Centre de Culture Contemporaine - Montpellier (www.lapanacee.org)</string>
+    <string name="help"><b>Enregistrez vos déplacements</b> pour partager vos parcours et contribuer au projet Grimpant :\n\nAppuyez sur le bouton «Commencer le parcours» pour débuter l\'enregistrement de vos déplacements à travers la ville.\n\n\n<b>Plantez une graine</b> pour faire entendre votre voix dans le projet Grimpant :\n\nPendant votre parcours, lorsque vous découvrez une plante ou un arbre qui vous semble remarquable, appuyez sur le bouton «Planter une graine» pour enregistrer votre commentaire audio sur la plante, l\'arbre ou la vigne de votre choix (une minute maximum).\n\nAppuyez sur le bouton «Écouter» pour réécouter votre enregistrement avant de l\'envoyer. Grimpant vous propose ensuite d\'envoyer votre enregistrement.\n\n\n<b>Écouter une graine</b> :\n\nVous pouvez écouter les enregistrements des autres personnes en sélectionnant une graine sur la carte.</string>
+</resources>

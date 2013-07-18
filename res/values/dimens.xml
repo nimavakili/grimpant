@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="label_size">12dp</dimen>
+    <dimen name="btn_size">13dp</dimen>
+    <dimen name="title_size">16dp</dimen>
+</resources>
