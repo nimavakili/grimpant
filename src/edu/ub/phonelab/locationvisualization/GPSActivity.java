@@ -329,14 +329,14 @@ public class GPSActivity extends Activity {
 	            builder.setCancelable(false);
             	if (gpsService.GPSDisabled()) {
 		            builder.setMessage(getStr(R.string.need_lock) + " " + getStr(R.string.gps_disabled));
-		            builder.setPositiveButton("Enable GPS", new DialogInterface.OnClickListener() {
+		            builder.setPositiveButton(getStr(R.string.enable_gps), new DialogInterface.OnClickListener() {
 		                 public void onClick(DialogInterface dialog, int id) {
 		                      Intent gpsOptionsIntent = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
 		                      gpsOptionsIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		                      startActivity(gpsOptionsIntent);
 		                  }
 		             });
-		             builder.setNegativeButton("Do Nothing", new DialogInterface.OnClickListener() {
+		             builder.setNegativeButton(getStr(R.string.do_nothing), new DialogInterface.OnClickListener() {
 		                  public void onClick(DialogInterface dialog, int id) {
 		                	  dialog.cancel();
 		                  }
